@@ -3,96 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SeniorKomfort - Akcesoria dla Seniorów</title>
+    <title>SeniorKomfort Premium | Ekskluzywne Akcesoria dla Seniorów</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Background Elements -->
+    <div class="bg-gradient"></div>
+    <div class="bg-particles" id="particles"></div>
+    
     <!-- Header -->
     <header class="header">
-        <div class="container">
+        <div class="container header-container">
             <div class="logo">
-                <h1>🌟 SeniorKomfort</h1>
+                <span class="logo-icon">✦</span>
+                <h1>SeniorKomfort<span class="premium-badge">Premium</span></h1>
             </div>
             <nav class="nav">
                 <ul>
-                    <li><a href="#home">Strona główna</a></li>
-                    <li><a href="#products">Produkty</a></li>
-                    <li><a href="#about">O nas</a></li>
-                    <li><a href="#contact">Kontakt</a></li>
+                    <li><a href="#home" class="nav-link">Strona główna</a></li>
+                    <li><a href="#products" class="nav-link">Kolekcja</a></li>
+                    <li><a href="#about" class="nav-link">O nas</a></li>
+                    <li><a href="#contact" class="nav-link">Kontakt</a></li>
                 </ul>
             </nav>
-            <div class="cart">
-                <button class="cart-btn">🛒 Koszyk (0)</button>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Przełącz motyw">
+                    <span class="sun-icon">☀️</span>
+                    <span class="moon-icon">🌙</span>
+                </button>
+                <button class="cart-btn">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-text">Koszyk</span>
+                    <span class="cart-count">0</span>
+                </button>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="container">
-            <h2>Komfort i Bezpieczeństwo w Każdym Wieku</h2>
-            <p>Odkryj naszą ofertę specjalistycznych akcesoriów dla seniorów</p>
-            <a href="#products" class="btn-primary">Zobacz ofertę</a>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-badge">Ekskluzywna Kolekcja 2024</span>
+                <h2>Komfort i Bezpieczeństwo<br><span class="gradient-text">w Najwyższym Standardzie</span></h2>
+                <p>Odkryj naszą ekskluzywną kolekcję specjalistycznych akcesoriów dla seniorów, łączącą luksusowy design z niezrównaną funkcjonalnością.</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn-primary">
+                        <span>Zobacz Kolekcję</span>
+                        <span class="btn-arrow">→</span>
+                    </a>
+                    <a href="#about" class="btn-secondary">
+                        <span>Poznaj Naszą Historię</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Lat Doświadczenia</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10k+</span>
+                        <span class="stat-label">Zadowolonych Klientów</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Gwarancji Jakości</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <span class="card-icon">✦</span>
+                        <h3>Premium Quality</h3>
+                        <p>Najwyższa jakość materiałów i wykonania</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="currentColor"/>
+            </svg>
         </div>
     </section>
 
     <!-- Products Section -->
     <section id="products" class="products">
         <div class="container">
-            <h2>Nasze Produkty</h2>
+            <div class="section-header">
+                <span class="section-badge">Nasza Kolekcja</span>
+                <h2>Wyjątkowe Produkty<br><span class="gradient-text">Dla Wyjątkowych Osób</span></h2>
+                <p>Każdy produkt został starannie wyselekcjonowany, aby zapewnić najwyższy komfort i bezpieczeństwo.</p>
+            </div>
             <div class="product-grid">
                 <!-- Product 1 -->
-                <div class="product-card">
-                    <div class="product-image">🦯</div>
-                    <h3>Laska Ortopedyczna</h3>
-                    <p>Ergonomiczna laska z regulacją wysokości</p>
-                    <span class="price">89,00 zł</span>
-                    <button class="btn-add">Dodaj do koszyka</button>
+                <div class="product-card premium">
+                    <div class="product-badge">Bestseller</div>
+                    <div class="product-image-wrapper">
+                        <div class="product-image">🦯</div>
+                        <div class="product-overlay">
+                            <button class="btn-quickview">Szybki podgląd</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Laska Ortopedyczna Premium</h3>
+                        <p>Ergonomiczna laska z regulacją wysokości, wykonana z włókna węglowego</p>
+                        <div class="product-meta">
+                            <span class="product-category">Akcesoria</span>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-count">(48)</span>
+                            </div>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">89,00 zł</span>
+                            <button class="btn-add">
+                                <span class="add-icon">+</span>
+                                <span>Dodaj</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Product 2 -->
-                <div class="product-card">
-                    <div class="product-image">🪑</div>
-                    <h3>Podwyższenie na Krzesło</h3>
-                    <p>Wygodne podwyższenie z poręczami</p>
-                    <span class="price">249,00 zł</span>
-                    <button class="btn-add">Dodaj do koszyka</button>
+                <div class="product-card premium">
+                    <div class="product-badge new">Nowość</div>
+                    <div class="product-image-wrapper">
+                        <div class="product-image">🪑</div>
+                        <div class="product-overlay">
+                            <button class="btn-quickview">Szybki podgląd</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Podwyższenie na Krzesło Deluxe</h3>
+                        <p>Wygodne podwyższenie z poręczami, tapicerowane ekoskórą</p>
+                        <div class="product-meta">
+                            <span class="product-category">Meble</span>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-count">(32)</span>
+                            </div>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">249,00 zł</span>
+                            <button class="btn-add">
+                                <span class="add-icon">+</span>
+                                <span>Dodaj</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Product 3 -->
-                <div class="product-card">
-                    <div class="product-image">🔍</div>
-                    <h3>Lupa z Podświetleniem</h3>
-                    <p>Lupa LED 3x powiększenia</p>
-                    <span class="price">65,00 zł</span>
-                    <button class="btn-add">Dodaj do koszyka</button>
+                <div class="product-card premium">
+                    <div class="product-image-wrapper">
+                        <div class="product-image">🔍</div>
+                        <div class="product-overlay">
+                            <button class="btn-quickview">Szybki podgląd</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Lupa z Podświetleniem LED</h3>
+                        <p>Lupa LED 3x powiększenia z regulowanym oświetleniem</p>
+                        <div class="product-meta">
+                            <span class="product-category">Elektronika</span>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-count">(27)</span>
+                            </div>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">65,00 zł</span>
+                            <button class="btn-add">
+                                <span class="add-icon">+</span>
+                                <span>Dodaj</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Product 4 -->
-                <div class="product-card">
-                    <div class="product-image">💊</div>
-                    <h3>Pojemnik na Leki</h3>
-                    <p>Organizer z alarmem na 7 dni</p>
-                    <span class="price">45,00 zł</span>
-                    <button class="btn-add">Dodaj do koszyka</button>
+                <div class="product-card premium">
+                    <div class="product-image-wrapper">
+                        <div class="product-image">💊</div>
+                        <div class="product-overlay">
+                            <button class="btn-quickview">Szybki podgląd</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Pojemnik na Leki Smart</h3>
+                        <p>Organizer z alarmem na 7 dni z aplikacją mobilną</p>
+                        <div class="product-meta">
+                            <span class="product-category">Zdrowie</span>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-count">(56)</span>
+                            </div>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">45,00 zł</span>
+                            <button class="btn-add">
+                                <span class="add-icon">+</span>
+                                <span>Dodaj</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Product 5 -->
-                <div class="product-card">
-                    <div class="product-image">🚿</div>
-                    <h3>Krzesełko Prysznicowe</h3>
-                    <p>Wodoodporne z regulacją wysokości</p>
-                    <span class="price">189,00 zł</span>
-                    <button class="btn-add">Dodaj do koszyka</button>
+                <div class="product-card premium">
+                    <div class="product-badge popular">Popularny</div>
+                    <div class="product-image-wrapper">
+                        <div class="product-image">🚿</div>
+                        <div class="product-overlay">
+                            <button class="btn-quickview">Szybki podgląd</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Krzesełko Prysznicowe Spa</h3>
+                        <p>Wodoodporne z regulacją wysokości, antypoślizgowe</p>
+                        <div class="product-meta">
+                            <span class="product-category">Łazienka</span>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-count">(41)</span>
+                            </div>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">189,00 zł</span>
+                            <button class="btn-add">
+                                <span class="add-icon">+</span>
+                                <span>Dodaj</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Product 6 -->
-                <div class="product-card">
-                    <div class="product-image">📞</div>
-                    <h3>Telefon z Dużymi Przyciskami</h3>
-                    <p>Prosty w obsłudze telefon seniorski</p>
-                    <span class="price">159,00 zł</span>
-                    <button class="btn-add">Dodaj do koszyka</button>
+                <div class="product-card premium">
+                    <div class="product-image-wrapper">
+                        <div class="product-image">📞</div>
+                        <div class="product-overlay">
+                            <button class="btn-quickview">Szybki podgląd</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Telefon z Dużymi Przyciskami</h3>
+                        <p>Prosty w obsłudze telefon seniorski z SOS</p>
+                        <div class="product-meta">
+                            <span class="product-category">Elektronika</span>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-count">(38)</span>
+                            </div>
+                        </div>
+                        <div class="product-footer">
+                            <span class="price">159,00 zł</span>
+                            <button class="btn-add">
+                                <span class="add-icon">+</span>
+                                <span>Dodaj</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -101,23 +278,40 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2>O Nas</h2>
-            <p>Jesteśmy firmą z wieloletnim doświadczeniem w branży akcesoriów dla seniorów. Naszą misją jest poprawa komfortu życia osób starszych poprzez dostarczanie wysokiej jakości produktów.</p>
-            <div class="features">
-                <div class="feature">
-                    <span class="feature-icon">✓</span>
-                    <h3>Gwarancja Jakości</h3>
-                    <p>Tylko sprawdzone produkty</p>
+            <div class="section-header">
+                <span class="section-badge">Nasza Historia</span>
+                <h2>Tradycja i Nowoczesność<br><span class="gradient-text">Połączenie Ideałów</span></h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-lead">Jesteśmy firmą z ponad 15-letnim doświadczeniem w branży ekskluzywnych akcesoriów dla seniorów. Naszą misją jest podnoszenie standardu życia osób starszych poprzez dostarczanie produktów najwyższej jakości.</p>
+                    <p>Każdy element naszej kolekcji przechodzi rygorystyczne testy jakości, aby spełnić oczekiwania najbardziej wymagających klientów. Współpracujemy z czołowymi projektantami i inżynierami, tworząc rozwiązania, które łączą elegancję z funkcjonalnością.</p>
+                    <div class="about-signature">
+                        <span class="signature-name">Zespół SeniorKomfort Premium</span>
+                    </div>
                 </div>
-                <div class="feature">
-                    <span class="feature-icon">✓</span>
-                    <h3>Szybka Dostawa</h3>
-                    <p>Darmowa dostawa od 200 zł</p>
-                </div>
-                <div class="feature">
-                    <span class="feature-icon">✓</span>
-                    <h3>Wsparcie Klienta</h3>
-                    <p>Pomoc w wyborze produktu</p>
+                <div class="about-features">
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <span class="feature-icon">✦</span>
+                        </div>
+                        <h3>Gwarancja Jakości Premium</h3>
+                        <p>Tylko certyfikowane produkty od sprawdzonych dostawców z całego świata</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <span class="feature-icon">🚀</span>
+                        </div>
+                        <h3>Ekspresowa Dostawa</h3>
+                        <p>Darmowa dostawa premium już od 200 zł, realizacja w 24h</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <span class="feature-icon">💎</span>
+                        </div>
+                        <h3>Concierge Service</h3>
+                        <p>Personalizowane wsparcie i pomoc w doborze idealnych rozwiązań</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -126,34 +320,109 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Kontakt</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h3>📍 Adres</h3>
-                    <p>ul. Przykładowa 123<br>00-001 Warszawa</p>
+            <div class="section-header">
+                <span class="section-badge">Skontaktuj się</span>
+                <h2>Jesteśmy do Twojej Dyspozycji<br><span class="gradient-text">Premium Support 24/7</span></h2>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">📍</div>
+                        <h3>Adres</h3>
+                        <p>ul. Złota 44, Sky Tower<br>00-120 Warszawa, Polska</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">📞</div>
+                        <h3>Telefon Premium</h3>
+                        <p><a href="tel:+48800123456">+48 800 123 456</a></p>
+                        <span class="contact-note">Linia dostępna 24/7</span>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">✉️</div>
+                        <h3>Email Concierge</h3>
+                        <p><a href="mailto:premium@seniorkomfort.pl">premium@seniorkomfort.pl</a></p>
+                        <span class="contact-note">Odpowiedź w ciągu 1h</span>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <h3>📞 Telefon</h3>
-                    <p>+48 123 456 789</p>
-                </div>
-                <div class="contact-item">
-                    <h3>✉️ Email</h3>
-                    <p>kontakt@seniorkomfort.pl</p>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form premium">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Imię i nazwisko</label>
+                                <input type="text" id="name" placeholder="Wpisz swoje imię" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Adres email</label>
+                                <input type="email" id="email" placeholder="twoj@email.pl" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Numer telefonu (opcjonalnie)</label>
+                            <input type="tel" id="phone" placeholder="+48 ...">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Wiadomość</label>
+                            <textarea id="message" placeholder="Opisz, jak możemy Ci pomóc..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-submit">
+                            <span>Wyślij Wiadomość</span>
+                            <span class="btn-arrow">→</span>
+                        </button>
+                    </form>
                 </div>
             </div>
-            <form class="contact-form">
-                <input type="text" placeholder="Imię i nazwisko" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Wiadomość" rows="5" required></textarea>
-                <button type="submit" class="btn-primary">Wyślij wiadomość</button>
-            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer premium">
         <div class="container">
-            <p>&copy; 2024 SeniorKomfort. Wszelkie prawa zastrzeżone.</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">✦</span>
+                        <h2>SeniorKomfort<span class="premium-badge">Premium</span></h2>
+                    </div>
+                    <p>Ekskluzywne akcesoria dla seniorów, łączące luksus z funkcjonalnością od 2009 roku.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Produkty</h4>
+                        <ul>
+                            <li><a href="#">Akcesoria</a></li>
+                            <li><a href="#">Meble</a></li>
+                            <li><a href="#">Elektronika</a></li>
+                            <li><a href="#">Zdrowie</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Firma</h4>
+                        <ul>
+                            <li><a href="#about">O nas</a></li>
+                            <li><a href="#">Kariera</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#contact">Kontakt</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Pomoc</h4>
+                        <ul>
+                            <li><a href="#">Dostawa</a></li>
+                            <li><a href="#">Zwroty</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Regulamin</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SeniorKomfort Premium. Wszystkie prawa zastrzeżone.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Facebook">f</a>
+                    <a href="#" class="social-link" aria-label="Instagram">in</a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">li</a>
+                </div>
+            </div>
         </div>
     </footer>
 
